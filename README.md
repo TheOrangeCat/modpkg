@@ -1,5 +1,5 @@
 # modpkg
-This is a pretty basic Minecraft Modpack manager.
+This is a pretty basic Minecraft Modpack "manager" that I cobbled together in a few hours.
 It takes in a Flame-like manifest.json and produces a zip file containing a filled-in manifest.json and the overrides folder specified in the input file.
 The input doesn't require fileID filled in and also has some custom variables.
 ## Additional variables
