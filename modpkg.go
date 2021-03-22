@@ -12,7 +12,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	//    "strings"
+	"strings"
 	"io"
 	"sync"
 	//    "sort"
@@ -141,7 +141,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	modpack, err := os.Create(fmt.Sprintf("%s-%s.zip", i.Name, i.Version))
+	zipName := strings.ReplaceAll(i.Name, " ", "+")
+	modpack, err := os.Create(fmt.Sprintf("%s-%s.zip", zipName, i.Version))
 	if err != nil {
 		log.Fatal(err)
 	}
